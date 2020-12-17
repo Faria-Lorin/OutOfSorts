@@ -22,7 +22,7 @@ public class Sorts{
   public static void selectionSort(int[] data){
     for(int j = 0; j < data.length; j++){
       int tempIndex = j;
-      for(int i = j+1; i < data.length-1; i++){
+      for(int i = j+1; i < data.length; i++){
         if (data[i] < data[tempIndex]){
           tempIndex = i;
         }
