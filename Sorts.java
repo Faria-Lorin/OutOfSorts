@@ -34,10 +34,10 @@ public class Sorts{
     }
   public static void insertionSort(int[] data){
 
-    for(int j = 0; j < data.length; j++){
+    for(int j = 1; j < data.length; j++){
       int newIndex = 0;
       int[] temp = new int[data.length];
-      for(int i = j+1; i > 0;){
+      for(int i = j-1; i > 0;){
         if (data[j] < data[i]){
           newIndex = i-1;
           i--;
