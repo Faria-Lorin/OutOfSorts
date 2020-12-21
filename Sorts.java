@@ -35,29 +35,14 @@ public class Sorts{
   public static void insertionSort(int[] data){
 
     for(int j = 1; j < data.length; j++){
-      int newIndex = 0;
-      int[] temp = new int[data.length];
-      for(int i = j-1; i > 0;){
-        if (data[j] < data[i]){
-          newIndex = i-1;
-          i--;
-        }
-        else {
-          newIndex = i;
-          break;
-        }
+      int newIndex = j;
+      int value = data[j];
+      while (newIndex > 0 && data[newIndex-1] > value){
+        data[newIndex] = data[newIndex-1];
+        newIndex = newIndex - 1;
       }
-      for (int p = 0; p < data.length-1; p++){
-        if (p < newIndex){
-          temp[p] = data[p];
-        }
-        else if (p == newIndex){
-          temp[p] = data[j];
-        }
-        else {
-          temp[p+1] = data[p+1];
-        }
-      }
+
+      data[newIndex] = value;
       }
   }
 }
