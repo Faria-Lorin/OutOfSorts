@@ -40,13 +40,15 @@ public class Driver{
 
       if(args[1].equals("bubble")){
         Sorts.bubbleSort(randData);
-        System.out.println(Arrays.toString(randData));
+        System.out.println("DONE!");
       }
       else if(args[1].equals("selection")){
         Sorts.selectionSort(randData);
+        System.out.println("DONE!");
       }
       else if(args[1].equals("insertion")){
         Sorts.insertionSort(randData);
+        System.out.println("DONE!");
       }
 
       //TEST MODE! This lets you see if your algorithm fails
