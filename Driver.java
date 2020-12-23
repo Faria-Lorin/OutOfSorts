@@ -16,15 +16,13 @@ public class Driver{
         randData[i] = rng.nextInt() % 1000;
       }
       int[] a = new int[1];
-      a[0] = 8;
       //overhead: 1 random array generation.
       if(args.length < 3 || args[2].equals("random")){
-        System.out.println(Arrays.toString(randData));
+        //keeps random array as it is//
       }else if(args[2].equals("equal")){
 	      System.out.println(Arrays.toString(randData));
       }else if(args[2].equals("sorted")){
 	      Arrays.sort(randData);
-        System.out.println(Arrays.toString(randData));
       }else if(args[2].equals("reversed")){
         Arrays.sort(randData);
         for (int i = 0; i < randData.length; i ++){
@@ -35,10 +33,9 @@ public class Driver{
             randData[(randData.length-1) - i] = temp;
           }
         }
-        System.out.println(Arrays.toString(randData));
       }
 
-    /*  if(args[1].equals("bubble")){
+      if(args[1].equals("bubble")){
         Sorts.bubbleSort(randData);
       }
       else if(args[1].equals("selection")){
@@ -51,7 +48,7 @@ public class Driver{
       //TEST MODE! This lets you see if your algorithm fails
       //for a particular type of array, or size of array.
       //This is not meant to be a timed test...
-      else if(args[1].equals("test")){
+        else if(args[1].equals("test")){
 
         int[] randDataBubble = Arrays.copyOf(randData,randData.length);
         int[] randDataSelection = Arrays.copyOf(randData,randData.length);
@@ -78,7 +75,7 @@ public class Driver{
         }else{
          System.out.println("Insertion Not Correct!!!!!!!!!11oneeleven");
         }
-      }*/
+      }
     }
   }
 }
