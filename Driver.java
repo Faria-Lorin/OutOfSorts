@@ -15,12 +15,15 @@ public class Driver{
       for(int i =  0; i < lim; i++ ){
         randData[i] = rng.nextInt() % 1000;
       }
-      
+
       //overhead: 1 random array generation.
       if(args.length < 3 || args[2].equals("random")){
         //keeps random array as it is//
       }else if(args[2].equals("equal")){
-	      System.out.println(Arrays.toString(randData));
+        int eq = (int)(Math.random()*10000);
+        for(int i =  0; i < lim; i++ ){
+          randData[i] = eq;
+        }
       }else if(args[2].equals("sorted")){
 	      Arrays.sort(randData);
       }else if(args[2].equals("reversed")){
@@ -37,6 +40,7 @@ public class Driver{
 
       if(args[1].equals("bubble")){
         Sorts.bubbleSort(randData);
+        System.out.println(Arrays.toString(randData));
       }
       else if(args[1].equals("selection")){
         Sorts.selectionSort(randData);
